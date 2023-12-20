@@ -61,7 +61,13 @@ export default function Home() {
           <p className="mb-4 text-lg text-gray-700">ZiggySlide</p>
           <p className="mb-4 text-lg text-gray-700">A Synthetic Influencer</p>
                 
-                
+                <Image
+                    src="/1.png"
+                    alt={`ziggyslide`}
+                    width={500}
+                    height={500}
+                    className="object-cover w-full h-full rounded-md border-gray-300"
+                  />
           <p className="m-4 text-lg text-gray-700 "> A Colorful Male Red Hair Influencer having Adventures on an Inflatable Sliding Board</p>
           <p>Instantiate a Synthetic Influencer with this AI model trained to create and instantiate an specific fictional character and world.</p>
           <br/>
@@ -116,7 +122,7 @@ export default function Home() {
         ) : (
           prediction && (
             <div className="mt-4">
-              {prediction.output && prediction.output.map((url, index) => (
+              {prediction.output && prediction.output.map((url: string, index: number) => (
                 <div key={index} className="flex flex-col items-center justify-center w-full mb-4">
                   <Image
                     src={url}
